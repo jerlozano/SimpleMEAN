@@ -1,0 +1,20 @@
+<br/><br/>
+<form class="form-inline">
+    <div class="form-group">
+        <label for="username">Add a New User</label>
+        <input type="text" class="form-control" id="username" ng-model="newuser"/>&nbsp;
+        <button type="button" class="btn btn-primary" ng-click="postToDb()">Save</button>
+    </div>
+</form>
+<br/><br/>
+
+<div class="row">
+    <div class="col-md-4">
+        <ul class="list-group" ng-repeat="u in userlist">
+            <li class="list-group-item list-group-item-info">
+                <span class="badge" ng-click="deleteName(u._id)">X</span>
+                {{u.name}}
+            </li>
+        </ul>
+    </div>
+</div>
