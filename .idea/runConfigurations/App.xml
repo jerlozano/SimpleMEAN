@@ -1,9 +1,9 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="App" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$">
+  <configuration default="false" name="App" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$">
     <envs>
       <env name="DEBUG" value="sMean" />
     </envs>
-    <browser name="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" start="true" with-js-debugger="true" url="http://localhost:3000/" />
+    <browser name="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" with-js-debugger="true" url="http://localhost:3000/" />
     <RunnerSettings RunnerId="Basic" />
     <RunnerSettings RunnerId="debuggableProgram" />
     <ConfigurationWrapper RunnerId="Basic" />

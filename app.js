@@ -8,6 +8,7 @@ var mongoose = require('mongoose');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var playbooks = require('./routes/playbooks');
 var makefirsts = require('./routes/makefirst');
 
 var app = express();
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/makefirst', makefirsts);
+app.use('/playbooks', playbooks);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
