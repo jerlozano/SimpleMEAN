@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
 var playbooksSchema = new Schema({
     title: {type: String, required: true},
-    favorite: {type: Boolean, required: true},
+    favorite: Boolean,
     items: [],
     titlecolor: String
 })

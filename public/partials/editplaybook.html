@@ -18,10 +18,17 @@
                                         <input type="text" ng-model="ptitle" class="form-control" value="Name your playbook...">
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label class="col-md-1 control-label"></label>
+                                    <div class="col-md-11">
+                                        <input ng-model="favoritechoice" type="checkbox" id="cbox1" value="first_checkbox"> Mark as a favorite
+                                    </div>
+                                </div>
                                 <div class="form-group row">
                                     <label class="col-md-1 control-label"></label>
                                     <div class="col-md-11">
-                                        <button class="btn btn-secondary" type="submit">Save</button>
+                                        <button class="btn btn-secondary" type="submit">Save</button>&nbsp;
+                                        <span>{{updatemsg}}</span>
                                     </div>
                                 </div>
                             </form>

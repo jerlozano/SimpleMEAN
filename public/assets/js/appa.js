@@ -14,7 +14,11 @@ PSApps.config(['$routeProvider',
             templateUrl: '/partials/main.html',
             controller: 'homeCtrl'
         }).
-        when('/playbook', {
+        when('/playbook',{
+            templateUrl: '/partials/editplaybook.html',
+            controller: 'pbCtrl'
+        }).
+        when('/playbook/:pbId',{
             templateUrl: '/partials/editplaybook.html',
             controller: 'pbCtrl'
         }).
