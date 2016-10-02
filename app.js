@@ -49,8 +49,20 @@ if (app.get('env') === 'development') {
         });
     });
     mongoose.connect('mongodb://localhost/mongo');
+    console.log("Running in " + app.get('env'));
 }
 
+if (app.get('env') === 'production') {
+    app.use(function (err, req, res, next) {
+        res.status(err.status || 500);
+        res.render('error', {
+            message: err.message,
+            error: err
+        });
+    });
+    mongoose.connect('mongodb://localhost/mongo');
+    console.log("Running in Production");
+}
 
 // production error handler
 // no stacktraces leaked to user
