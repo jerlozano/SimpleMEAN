@@ -111,11 +111,13 @@ PSAppsControllers.controller('pbCtrl', ['$scope', '$http', '$routeParams',
 
         }
 
-        $scope.additem = function(){
+        $scope.itemsubmit = function(){
             //gather the current state of the items
             //create the JSON object to post
             //post back to the server
             //redraw the page
+            //alert($scope.iteminput);
+
 
         }
 

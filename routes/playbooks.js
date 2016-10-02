@@ -35,7 +35,7 @@ router.put('/:pbId', function (req, res, next) {
 });
 
 
-/!* Post a new playbook *!/
+/* Post a new playbook */
 router.post('/', function (req, res, next) {
     console.log(req.body);
 

@@ -52,6 +52,7 @@ if (app.get('env') === 'development') {
     console.log("Running in " + app.get('env'));
 }
 
+//production branch
 if (app.get('env') === 'production') {
     app.use(function (err, req, res, next) {
         res.status(err.status || 500);
@@ -60,8 +61,8 @@ if (app.get('env') === 'production') {
             error: err
         });
     });
-    mongoose.connect('mongodb://localhost/mongo');
-    console.log("Running in Production");
+    mongoose.connect('mongodb://127.0.0.1/mongo');
+    console.log("Running in " + app.get('env'));
 }
 
 // production error handler

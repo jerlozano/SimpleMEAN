@@ -108,11 +108,11 @@
                                 Create or edit a new item
                             </p>
 
-                            <form class="form-horizontal" role="form">
+                            <form class="form-horizontal" role="form" ng-controller="pbCtrl" name="ItemForm" ng-submit="itemsubmit()">
                                 <div class="form-group">
-                                    <label class="col-md-2 control-label">Text</label>
+                                    <label class="col-md-2 control-label">Name</label>
                                     <div class="col-md-10">
-                                        <input type="text" class="form-control" value="Some text value..."></br>
+                                        <input type="text" ng-model="iteminput" class="form-control" value="Item name..."></br>
                                         <button class="btn btn-secondary" type="submit">Add Item</button>&nbsp;
                                     </div>
                                 </div>
