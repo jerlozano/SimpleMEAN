@@ -69,6 +69,7 @@ PSAppsControllers.controller('pbCtrl', ['$scope', '$http', '$routeParams',
                 $scope.pbData = data;
                 $scope.ptitle = data.title;
                 $scope.favoritechoice = data.favorite;
+                $scope.allitems=data.items;
             });
         }
 
@@ -107,6 +108,14 @@ PSAppsControllers.controller('pbCtrl', ['$scope', '$http', '$routeParams',
                         $scope.updatemsg="New Playbook Saved";
                     })
             }
+
+        }
+
+        $scope.additem = function(){
+            //gather the current state of the items
+            //create the JSON object to post
+            //post back to the server
+            //redraw the page
 
         }
 

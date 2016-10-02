@@ -45,6 +45,18 @@
                             </p>
 
                             <div class="custom-dd-empty dd" id="nestable_list_3">
+                                <ol class="dd-list" ng-repeat="i in allitems">
+                                    <li class="dd-item dd3-item" data-id="13">
+                                        <div class="dd-handle dd3-handle"></div>
+                                        <div class="dd3-content">
+                                            {{i.name}}
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+
+                            <!--<div class="custom-dd-empty dd" id="nestable_list_3">
                                 <ol class="dd-list">
                                     <li class="dd-item dd3-item" data-id="13">
                                         <div class="dd-handle dd3-handle"></div>
@@ -86,8 +98,8 @@
                                     </li>
                                 </ol>
                             </div>
-                        </div><!-- end col -->
-
+                        </div>&lt;!&ndash; end col &ndash;&gt;
+-->
                     </div> <!-- end row -->
                     <div class="col-md-6">
                         <div class="card-box">
@@ -100,7 +112,8 @@
                                 <div class="form-group">
                                     <label class="col-md-2 control-label">Text</label>
                                     <div class="col-md-10">
-                                        <input type="text" class="form-control" value="Some text value...">
+                                        <input type="text" class="form-control" value="Some text value..."></br>
+                                        <button class="btn btn-secondary" type="submit">Add Item</button>&nbsp;
                                     </div>
                                 </div>
                             </form>
