@@ -49,10 +49,27 @@ module.exports = function() {
       playbook.save();
       callback({
         success: true,
-        message: 'successfully update'
+        message: 'successfully updated'
       });
     });
   };
+
+  module.createPlaybook = function(data, callback) {
+    var pb = new Playbooks(data);
+    pb.save(function (err) {
+        if (err) {
+            callback({
+              success: false,
+              error: err.errors
+            });
+        } else {
+            callback({
+              success: true,
+              message: 'successfully created'
+            });
+        }
+    })
+  }
 
   return module;
 };

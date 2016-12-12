@@ -1,7 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var mongoose = require('mongoose');
-var Playbooks = require('../models/playbooks');
 var playbookController = require('../controllers/playbook-controller')();
 
 /* GET playbook listing. */
@@ -31,17 +29,9 @@ router.put('/:pbId', function (req, res, next) {
 
 /* Post a new playbook */
 router.post('/', function (req, res, next) {
-    var pb = new Playbooks(req.body);
-    pb.save(function (err) {
-        if (err) {
-            res.json({
-              success: false,
-              error: err.errors
-            });
-        } else {
-            res.json({message: 'playbook created!'});
-        }
-    })
+  playbookController.createPlaybook(req.body, function(payload) {
+    res.json(payload);
+  });
 });
 
 /*
