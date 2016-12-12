@@ -1,6 +1,3 @@
-// var config      = require('config');
-// var logger      = require('../common/logger.js');
-// var Movie       = require('../models').Movie;
 var Playbooks = require('../models/playbooks');
 
 /* Export exposed functions */
@@ -9,27 +6,42 @@ module.exports = function() {
   module.getAll = function(callback) {
     Playbooks.find(function (err, playbooks) {
         if(err) {
-          //do some error handling and return
+          callback({
+            success: false,
+            message: err
+          })
           return;
         }
-        callback(playbooks);
+        callback({
+          success: true,
+          message: playbooks
+        });
     });
   }
 
   module.getPlaybookById = function(id, callback) {
     Playbooks.findById(id, function (err, playbook) {
       if(err) {
-        //do some error handling and return
+        callback({
+          success: false,
+          message: err
+        })
         return;
       }
-      callback(playbook);
+      callback({
+        success: true,
+        message: playbook
+      });
     });
   }
 
   module.updatePlaybook = function(id, data, callback) {
     Playbooks.findById(id, function (err, playbook) {
       if(err) {
-        //do some error handling and return
+        callback({
+          success: false,
+          message: err
+        })
         return;
       }
       playbook.title = data.title;

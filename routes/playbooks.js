@@ -34,7 +34,10 @@ router.post('/', function (req, res, next) {
     var pb = new Playbooks(req.body);
     pb.save(function (err) {
         if (err) {
-            res.send(err.errors);
+            res.json({
+              success: false,
+              error: err.errors
+            });
         } else {
             res.json({message: 'playbook created!'});
         }

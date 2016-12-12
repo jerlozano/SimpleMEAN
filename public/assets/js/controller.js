@@ -10,7 +10,7 @@ PSAppsControllers.controller('homeCtrl', ['$scope', '$http', '$location',
         $scope.getAllPlaybooks = function () {
             //view data
             $http.get('/playbooks').success(function (data) {
-                $scope.playbooklist = data;
+                $scope.playbooklist = data.message;
             })
         }
 
@@ -66,10 +66,10 @@ PSAppsControllers.controller('pbCtrl', ['$scope', '$http', '$routeParams',
         if($scope.playbookid!=undefined) {
             //if the playbook id is filled in then go get the current record
             $http.get('/playbooks/' + $scope.playbookid).success(function (data) {
-                $scope.pbData = data;
-                $scope.ptitle = data.title;
-                $scope.favoritechoice = data.favorite;
-                $scope.allitems=data.items;
+                $scope.pbData = data.message;
+                $scope.ptitle = data.message.title;
+                $scope.favoritechoice = data.message.favorite;
+                $scope.allitems=data.message.items;
             });
         }
 
